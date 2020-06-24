@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MenuTareas_IIP", "Menu_Tareas_IIP\MenuTareas_IIP.vbproj", "{80EEC3C3-2CA1-4363-B227-53E9C2E946F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80EEC3C3-2CA1-4363-B227-53E9C2E946F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EEC3C3-2CA1-4363-B227-53E9C2E946F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EEC3C3-2CA1-4363-B227-53E9C2E946F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EEC3C3-2CA1-4363-B227-53E9C2E946F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACCAD31F-1EEE-447F-90DD-97FEF5B76BA0}
+	EndGlobalSection
+EndGlobal
