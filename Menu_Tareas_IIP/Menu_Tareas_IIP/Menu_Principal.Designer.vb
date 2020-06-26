@@ -23,9 +23,9 @@ Partial Class Menu_Principal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Principal))
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Me.PanelSuperior = New System.Windows.Forms.Panel()
         Me.btnRestore = New System.Windows.Forms.Button()
         Me.btnMinimizar = New System.Windows.Forms.Button()
@@ -37,7 +37,7 @@ Partial Class Menu_Principal
         Me.btnBolsaSolidaria = New System.Windows.Forms.Button()
         Me.btnTareas = New System.Windows.Forms.Button()
         Me.PanelMenuClase = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLibretaBanco = New System.Windows.Forms.Button()
         Me.btnArreglos = New System.Windows.Forms.Button()
         Me.btnClase = New System.Windows.Forms.Button()
         Me.PanelTitulo = New System.Windows.Forms.Panel()
@@ -47,6 +47,7 @@ Partial Class Menu_Principal
         Me.BT_PanelSubsMenus = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.BT2_PanelSubsMenus = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.MoverMenu = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.PanelSuperior.SuspendLayout()
         Me.Panel_SubsMenus.SuspendLayout()
         Me.Panel_Menu_Tareas.SuspendLayout()
@@ -61,8 +62,8 @@ Partial Class Menu_Principal
         Me.PanelSuperior.Controls.Add(Me.btnMinimizar)
         Me.PanelSuperior.Controls.Add(Me.btnMaximizar)
         Me.PanelSuperior.Controls.Add(Me.btnCerrar)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelSuperior, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.PanelSuperior, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelSuperior, BunifuAnimatorNS.DecorationType.None)
         Me.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSuperior.Location = New System.Drawing.Point(0, 0)
         Me.PanelSuperior.Name = "PanelSuperior"
@@ -73,8 +74,8 @@ Partial Class Menu_Principal
         '
         Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
         Me.btnRestore.FlatAppearance.BorderSize = 0
         Me.btnRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.btnRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
@@ -91,8 +92,8 @@ Partial Class Menu_Principal
         '
         Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
         Me.btnMinimizar.FlatAppearance.BorderSize = 0
         Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
@@ -108,8 +109,8 @@ Partial Class Menu_Principal
         '
         Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
         Me.btnMaximizar.FlatAppearance.BorderSize = 0
         Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
@@ -125,8 +126,8 @@ Partial Class Menu_Principal
         '
         Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
         Me.btnCerrar.FlatAppearance.BorderSize = 0
         Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
@@ -141,8 +142,8 @@ Partial Class Menu_Principal
         'PanelForms
         '
         Me.PanelForms.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelForms, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.PanelForms, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelForms, BunifuAnimatorNS.DecorationType.None)
         Me.PanelForms.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelForms.Location = New System.Drawing.Point(0, 50)
         Me.PanelForms.Name = "PanelForms"
@@ -157,8 +158,8 @@ Partial Class Menu_Principal
         Me.Panel_SubsMenus.Controls.Add(Me.PanelMenuClase)
         Me.Panel_SubsMenus.Controls.Add(Me.btnClase)
         Me.Panel_SubsMenus.Controls.Add(Me.PanelTitulo)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.Panel_SubsMenus, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.Panel_SubsMenus, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.Panel_SubsMenus, BunifuAnimatorNS.DecorationType.None)
         Me.Panel_SubsMenus.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel_SubsMenus.Location = New System.Drawing.Point(0, 50)
         Me.Panel_SubsMenus.Name = "Panel_SubsMenus"
@@ -168,8 +169,8 @@ Partial Class Menu_Principal
         'Panel_Menu_Tareas
         '
         Me.Panel_Menu_Tareas.Controls.Add(Me.btnBolsaSolidaria)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.Panel_Menu_Tareas, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.Panel_Menu_Tareas, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.Panel_Menu_Tareas, BunifuAnimatorNS.DecorationType.None)
         Me.Panel_Menu_Tareas.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_Menu_Tareas.Location = New System.Drawing.Point(0, 356)
         Me.Panel_Menu_Tareas.Name = "Panel_Menu_Tareas"
@@ -179,8 +180,8 @@ Partial Class Menu_Principal
         'btnBolsaSolidaria
         '
         Me.btnBolsaSolidaria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnBolsaSolidaria, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnBolsaSolidaria, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnBolsaSolidaria, BunifuAnimatorNS.DecorationType.None)
         Me.btnBolsaSolidaria.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnBolsaSolidaria.FlatAppearance.BorderSize = 0
         Me.btnBolsaSolidaria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -197,8 +198,8 @@ Partial Class Menu_Principal
         '
         Me.btnTareas.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnTareas.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
         Me.btnTareas.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnTareas.FlatAppearance.BorderSize = 0
         Me.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
@@ -216,38 +217,38 @@ Partial Class Menu_Principal
         '
         'PanelMenuClase
         '
-        Me.PanelMenuClase.Controls.Add(Me.Button1)
+        Me.PanelMenuClase.Controls.Add(Me.btnLibretaBanco)
         Me.PanelMenuClase.Controls.Add(Me.btnArreglos)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelMenuClase, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.PanelMenuClase, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelMenuClase, BunifuAnimatorNS.DecorationType.None)
         Me.PanelMenuClase.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelMenuClase.Location = New System.Drawing.Point(0, 158)
         Me.PanelMenuClase.Name = "PanelMenuClase"
         Me.PanelMenuClase.Size = New System.Drawing.Size(259, 120)
         Me.PanelMenuClase.TabIndex = 2
         '
-        'Button1
+        'btnLibretaBanco
         '
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.Button1, BunifuAnimatorNS.DecorationType.None)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.Button1, BunifuAnimatorNS.DecorationType.None)
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(0, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(259, 70)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Libreta Banco"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnLibretaBanco.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnLibretaBanco, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnLibretaBanco, BunifuAnimatorNS.DecorationType.None)
+        Me.btnLibretaBanco.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnLibretaBanco.FlatAppearance.BorderSize = 0
+        Me.btnLibretaBanco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnLibretaBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLibretaBanco.Font = New System.Drawing.Font("Times New Roman", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLibretaBanco.Location = New System.Drawing.Point(0, 35)
+        Me.btnLibretaBanco.Name = "btnLibretaBanco"
+        Me.btnLibretaBanco.Size = New System.Drawing.Size(259, 70)
+        Me.btnLibretaBanco.TabIndex = 1
+        Me.btnLibretaBanco.Text = "Libreta Banco"
+        Me.btnLibretaBanco.UseVisualStyleBackColor = True
         '
         'btnArreglos
         '
         Me.btnArreglos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnArreglos, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnArreglos, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnArreglos, BunifuAnimatorNS.DecorationType.None)
         Me.btnArreglos.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnArreglos.FlatAppearance.BorderSize = 0
         Me.btnArreglos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -264,8 +265,8 @@ Partial Class Menu_Principal
         '
         Me.btnClase.BackColor = System.Drawing.Color.DarkSlateGray
         Me.btnClase.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
         Me.btnClase.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnClase.FlatAppearance.BorderSize = 0
         Me.btnClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
@@ -286,8 +287,8 @@ Partial Class Menu_Principal
         Me.PanelTitulo.Controls.Add(Me.btnMenu)
         Me.PanelTitulo.Controls.Add(Me.titleSeparator)
         Me.PanelTitulo.Controls.Add(Me.Label1)
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelTitulo, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.PanelTitulo, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.PanelTitulo, BunifuAnimatorNS.DecorationType.None)
         Me.PanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTitulo.Location = New System.Drawing.Point(0, 0)
         Me.PanelTitulo.Name = "PanelTitulo"
@@ -298,8 +299,8 @@ Partial Class Menu_Principal
         '
         Me.btnMenu.BackgroundImage = CType(resources.GetObject("btnMenu.BackgroundImage"), System.Drawing.Image)
         Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
         Me.btnMenu.FlatAppearance.BorderSize = 0
         Me.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -312,8 +313,8 @@ Partial Class Menu_Principal
         'titleSeparator
         '
         Me.titleSeparator.BackColor = System.Drawing.Color.Transparent
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.titleSeparator, BunifuAnimatorNS.DecorationType.None)
         Me.BT_PanelSubsMenus.SetDecoration(Me.titleSeparator, BunifuAnimatorNS.DecorationType.None)
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.titleSeparator, BunifuAnimatorNS.DecorationType.None)
         Me.titleSeparator.ForeColor = System.Drawing.SystemColors.Control
         Me.titleSeparator.LineColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.titleSeparator.LineThickness = 2
@@ -329,8 +330,8 @@ Partial Class Menu_Principal
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.BT_PanelSubsMenus.SetDecoration(Me.Label1, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.Label1, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.Label1, BunifuAnimatorNS.DecorationType.None)
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(84, 16)
@@ -343,27 +344,6 @@ Partial Class Menu_Principal
         '
         Me.BT_PanelSubsMenus.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind
         Me.BT_PanelSubsMenus.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.BT_PanelSubsMenus.DefaultAnimation = Animation1
-        '
-        'BT2_PanelSubsMenus
-        '
-        Me.BT2_PanelSubsMenus.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
-        Me.BT2_PanelSubsMenus.Cursor = Nothing
         Animation2.AnimateOnlyDifferences = True
         Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
         Animation2.LeafCoeff = 0!
@@ -379,7 +359,28 @@ Partial Class Menu_Principal
         Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
         Animation2.TimeCoeff = 0!
         Animation2.TransparencyCoeff = 0!
-        Me.BT2_PanelSubsMenus.DefaultAnimation = Animation2
+        Me.BT_PanelSubsMenus.DefaultAnimation = Animation2
+        '
+        'BT2_PanelSubsMenus
+        '
+        Me.BT2_PanelSubsMenus.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide
+        Me.BT2_PanelSubsMenus.Cursor = Nothing
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.BT2_PanelSubsMenus.DefaultAnimation = Animation1
         '
         'MoverMenu
         '
@@ -387,6 +388,11 @@ Partial Class Menu_Principal
         Me.MoverMenu.Horizontal = True
         Me.MoverMenu.TargetControl = Me.PanelSuperior
         Me.MoverMenu.Vertical = True
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.BackColor = System.Drawing.Color.Teal
+        Me.ToolTip1.ForeColor = System.Drawing.SystemColors.Info
         '
         'Menu_Principal
         '
@@ -431,11 +437,12 @@ Partial Class Menu_Principal
     Friend WithEvents PanelTitulo As Panel
     Friend WithEvents btnMenu As Button
     Friend WithEvents Panel_Menu_Tareas As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLibretaBanco As Button
     Friend WithEvents btnClase As Button
     Friend WithEvents btnTareas As Button
     Friend WithEvents BT_PanelSubsMenus As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents BT2_PanelSubsMenus As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents MoverMenu As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents btnBolsaSolidaria As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

@@ -85,11 +85,63 @@ Public Class Menu_Principal
         OpenForms_Panel(Arreglos)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLibretaBanco.Click
         OpenForms_Panel(libreta_Bancaria)
     End Sub
 
     Private Sub btnBolsaSolidaria_Click(sender As Object, e As EventArgs) Handles btnBolsaSolidaria.Click
         OpenForms_Panel(Entrega_BolsaSolidaria)
+    End Sub
+
+    Private Sub btnArreglos_MouseHover(sender As Object, e As EventArgs) Handles btnArreglos.MouseHover
+        ToolTip1.SetToolTip(btnArreglos, "Abrir programa Arreglos")
+        ToolTip1.ToolTipTitle = "Arreglos"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnLibretaBanco_MouseHover(sender As Object, e As EventArgs) Handles btnLibretaBanco.MouseHover
+        ToolTip1.SetToolTip(btnLibretaBanco, "Abrir programa Libreta Banco")
+        ToolTip1.ToolTipTitle = "Libreta Bancaria"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnBolsaSolidaria_MouseHover(sender As Object, e As EventArgs) Handles btnBolsaSolidaria.MouseHover
+        ToolTip1.SetToolTip(btnBolsaSolidaria, "Abrir programa Solidary Bag")
+        ToolTip1.ToolTipTitle = "Bolsa Solidaria"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnMenu_MouseHover(sender As Object, e As EventArgs) Handles btnMenu.MouseHover
+        ToolTip1.SetToolTip(btnMenu, "Ver SubMenus")
+        ToolTip1.ToolTipTitle = "Menu Principal"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnClase_MouseHover(sender As Object, e As EventArgs) Handles btnClase.MouseHover
+        ToolTip1.SetToolTip(btnClase, "Ver Programas Clases")
+        ToolTip1.ToolTipTitle = "Programas en Clase"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnTareas_MouseHover(sender As Object, e As EventArgs) Handles btnTareas.MouseHover
+        ToolTip1.SetToolTip(btnTareas, "Ver Programas Tareas")
+        ToolTip1.ToolTipTitle = "Programas de Tarea"
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnCerrar_MouseHover(sender As Object, e As EventArgs) Handles btnCerrar.MouseHover
+        ToolTip1.SetToolTip(btnCerrar, "Cerrar")
+    End Sub
+
+    Private Sub btnMaximizar_MouseHover(sender As Object, e As EventArgs) Handles btnMaximizar.MouseHover
+        ToolTip1.SetToolTip(btnMaximizar, "Maximizar")
+    End Sub
+
+    Private Sub btnRestore_MouseHover(sender As Object, e As EventArgs) Handles btnRestore.MouseHover
+        ToolTip1.SetToolTip(btnRestore, "Restaurar")
+    End Sub
+
+    Private Sub btnMinimizar_MouseHover(sender As Object, e As EventArgs) Handles btnMinimizar.MouseHover
+        ToolTip1.SetToolTip(btnMinimizar, "Minimizar")
     End Sub
 End Class
