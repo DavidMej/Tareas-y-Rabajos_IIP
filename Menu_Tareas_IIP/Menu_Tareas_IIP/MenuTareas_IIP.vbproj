@@ -83,6 +83,7 @@
     <Compile Include="Arreglos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="conexion.vb" />
     <Compile Include="Entrega_BolsaSolidaria.Designer.vb">
       <DependentUpon>Entrega_BolsaSolidaria.vb</DependentUpon>
     </Compile>
@@ -124,6 +125,12 @@
     <Compile Include="Recibo Final.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Students Control.Designer.vb">
+      <DependentUpon>Students Control.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Students Control.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Arreglos.resx">
@@ -146,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recibo Final.resx">
       <DependentUpon>Recibo Final.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students Control.resx">
+      <DependentUpon>Students Control.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

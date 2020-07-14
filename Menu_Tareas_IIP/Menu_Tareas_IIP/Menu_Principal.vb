@@ -144,4 +144,8 @@ Public Class Menu_Principal
     Private Sub btnMinimizar_MouseHover(sender As Object, e As EventArgs) Handles btnMinimizar.MouseHover
         ToolTip1.SetToolTip(btnMinimizar, "Minimizar")
     End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        OpenForms_Panel(Students_Control)
+    End Sub
 End Class

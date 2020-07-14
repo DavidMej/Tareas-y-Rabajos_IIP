@@ -27,27 +27,28 @@ Partial Class Menu_Principal
         Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Principal))
         Me.PanelSuperior = New System.Windows.Forms.Panel()
-        Me.btnRestore = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnMaximizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.PanelForms = New System.Windows.Forms.Panel()
         Me.Panel_SubsMenus = New System.Windows.Forms.Panel()
         Me.Panel_Menu_Tareas = New System.Windows.Forms.Panel()
         Me.btnBolsaSolidaria = New System.Windows.Forms.Button()
-        Me.btnTareas = New System.Windows.Forms.Button()
         Me.PanelMenuClase = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnLibretaBanco = New System.Windows.Forms.Button()
         Me.btnArreglos = New System.Windows.Forms.Button()
-        Me.btnClase = New System.Windows.Forms.Button()
         Me.PanelTitulo = New System.Windows.Forms.Panel()
-        Me.btnMenu = New System.Windows.Forms.Button()
         Me.titleSeparator = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BT_PanelSubsMenus = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.BT2_PanelSubsMenus = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.MoverMenu = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnTareas = New System.Windows.Forms.Button()
+        Me.btnClase = New System.Windows.Forms.Button()
+        Me.btnMenu = New System.Windows.Forms.Button()
+        Me.btnRestore = New System.Windows.Forms.Button()
+        Me.btnMinimizar = New System.Windows.Forms.Button()
+        Me.btnMaximizar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.PanelSuperior.SuspendLayout()
         Me.Panel_SubsMenus.SuspendLayout()
         Me.Panel_Menu_Tareas.SuspendLayout()
@@ -69,75 +70,6 @@ Partial Class Menu_Principal
         Me.PanelSuperior.Name = "PanelSuperior"
         Me.PanelSuperior.Size = New System.Drawing.Size(1149, 50)
         Me.PanelSuperior.TabIndex = 0
-        '
-        'btnRestore
-        '
-        Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
-        Me.btnRestore.FlatAppearance.BorderSize = 0
-        Me.btnRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.btnRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
-        Me.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRestore.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.restore_down_32px1
-        Me.btnRestore.Location = New System.Drawing.Point(1043, -2)
-        Me.btnRestore.Name = "btnRestore"
-        Me.btnRestore.Size = New System.Drawing.Size(38, 46)
-        Me.btnRestore.TabIndex = 3
-        Me.btnRestore.UseVisualStyleBackColor = True
-        Me.btnRestore.Visible = False
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.negative_32px
-        Me.btnMinimizar.Location = New System.Drawing.Point(988, -2)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(40, 49)
-        Me.btnMinimizar.TabIndex = 2
-        Me.btnMinimizar.UseVisualStyleBackColor = True
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
-        Me.btnMaximizar.FlatAppearance.BorderSize = 0
-        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
-        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMaximizar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.maximize_window_32px
-        Me.btnMaximizar.Location = New System.Drawing.Point(1043, -2)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(39, 49)
-        Me.btnMaximizar.TabIndex = 1
-        Me.btnMaximizar.UseVisualStyleBackColor = True
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.close_window_32px
-        Me.btnCerrar.Location = New System.Drawing.Point(1099, -2)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(38, 49)
-        Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'PanelForms
         '
@@ -172,9 +104,9 @@ Partial Class Menu_Principal
         Me.BT_PanelSubsMenus.SetDecoration(Me.Panel_Menu_Tareas, BunifuAnimatorNS.DecorationType.None)
         Me.BT2_PanelSubsMenus.SetDecoration(Me.Panel_Menu_Tareas, BunifuAnimatorNS.DecorationType.None)
         Me.Panel_Menu_Tareas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_Menu_Tareas.Location = New System.Drawing.Point(0, 356)
+        Me.Panel_Menu_Tareas.Location = New System.Drawing.Point(0, 422)
         Me.Panel_Menu_Tareas.Name = "Panel_Menu_Tareas"
-        Me.Panel_Menu_Tareas.Size = New System.Drawing.Size(259, 88)
+        Me.Panel_Menu_Tareas.Size = New System.Drawing.Size(259, 96)
         Me.Panel_Menu_Tareas.TabIndex = 4
         '
         'btnBolsaSolidaria
@@ -194,29 +126,9 @@ Partial Class Menu_Principal
         Me.btnBolsaSolidaria.Text = "Solidary Bag"
         Me.btnBolsaSolidaria.UseVisualStyleBackColor = True
         '
-        'btnTareas
-        '
-        Me.btnTareas.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.btnTareas.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
-        Me.btnTareas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnTareas.FlatAppearance.BorderSize = 0
-        Me.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
-        Me.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTareas.Font = New System.Drawing.Font("Segoe Print", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTareas.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnTareas.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.homework_48px
-        Me.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnTareas.Location = New System.Drawing.Point(0, 278)
-        Me.btnTareas.Name = "btnTareas"
-        Me.btnTareas.Size = New System.Drawing.Size(259, 78)
-        Me.btnTareas.TabIndex = 3
-        Me.btnTareas.Text = "  Tareas"
-        Me.btnTareas.UseVisualStyleBackColor = False
-        '
         'PanelMenuClase
         '
+        Me.PanelMenuClase.Controls.Add(Me.Button1)
         Me.PanelMenuClase.Controls.Add(Me.btnLibretaBanco)
         Me.PanelMenuClase.Controls.Add(Me.btnArreglos)
         Me.BT_PanelSubsMenus.SetDecoration(Me.PanelMenuClase, BunifuAnimatorNS.DecorationType.None)
@@ -224,8 +136,25 @@ Partial Class Menu_Principal
         Me.PanelMenuClase.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelMenuClase.Location = New System.Drawing.Point(0, 158)
         Me.PanelMenuClase.Name = "PanelMenuClase"
-        Me.PanelMenuClase.Size = New System.Drawing.Size(259, 120)
+        Me.PanelMenuClase.Size = New System.Drawing.Size(259, 186)
         Me.PanelMenuClase.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.Button1, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.Button1, BunifuAnimatorNS.DecorationType.None)
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 10.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(0, 105)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(259, 64)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Students Control"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'btnLibretaBanco
         '
@@ -261,27 +190,6 @@ Partial Class Menu_Principal
         Me.btnArreglos.Text = "Arreglos"
         Me.btnArreglos.UseVisualStyleBackColor = True
         '
-        'btnClase
-        '
-        Me.btnClase.BackColor = System.Drawing.Color.DarkSlateGray
-        Me.btnClase.Cursor = System.Windows.Forms.Cursors.Default
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
-        Me.btnClase.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnClase.FlatAppearance.BorderSize = 0
-        Me.btnClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
-        Me.btnClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClase.Font = New System.Drawing.Font("Segoe Print", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClase.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnClase.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.classroom_48px
-        Me.btnClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClase.Location = New System.Drawing.Point(0, 100)
-        Me.btnClase.Name = "btnClase"
-        Me.btnClase.Size = New System.Drawing.Size(259, 58)
-        Me.btnClase.TabIndex = 1
-        Me.btnClase.Text = "      Proyectos Clase"
-        Me.btnClase.UseVisualStyleBackColor = False
-        '
         'PanelTitulo
         '
         Me.PanelTitulo.Controls.Add(Me.btnMenu)
@@ -294,21 +202,6 @@ Partial Class Menu_Principal
         Me.PanelTitulo.Name = "PanelTitulo"
         Me.PanelTitulo.Size = New System.Drawing.Size(259, 100)
         Me.PanelTitulo.TabIndex = 0
-        '
-        'btnMenu
-        '
-        Me.btnMenu.BackgroundImage = CType(resources.GetObject("btnMenu.BackgroundImage"), System.Drawing.Image)
-        Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
-        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
-        Me.btnMenu.FlatAppearance.BorderSize = 0
-        Me.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMenu.Location = New System.Drawing.Point(18, 0)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(52, 58)
-        Me.btnMenu.TabIndex = 3
-        Me.btnMenu.UseVisualStyleBackColor = True
         '
         'titleSeparator
         '
@@ -394,6 +287,132 @@ Partial Class Menu_Principal
         Me.ToolTip1.BackColor = System.Drawing.Color.Teal
         Me.ToolTip1.ForeColor = System.Drawing.SystemColors.Info
         '
+        'btnTareas
+        '
+        Me.btnTareas.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnTareas.Cursor = System.Windows.Forms.Cursors.Default
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnTareas, BunifuAnimatorNS.DecorationType.None)
+        Me.btnTareas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnTareas.FlatAppearance.BorderSize = 0
+        Me.btnTareas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
+        Me.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnTareas.Font = New System.Drawing.Font("Segoe Print", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTareas.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnTareas.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.homework_48px
+        Me.btnTareas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnTareas.Location = New System.Drawing.Point(0, 344)
+        Me.btnTareas.Name = "btnTareas"
+        Me.btnTareas.Size = New System.Drawing.Size(259, 78)
+        Me.btnTareas.TabIndex = 3
+        Me.btnTareas.Text = "  Tareas"
+        Me.btnTareas.UseVisualStyleBackColor = False
+        '
+        'btnClase
+        '
+        Me.btnClase.BackColor = System.Drawing.Color.DarkSlateGray
+        Me.btnClase.Cursor = System.Windows.Forms.Cursors.Default
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnClase, BunifuAnimatorNS.DecorationType.None)
+        Me.btnClase.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnClase.FlatAppearance.BorderSize = 0
+        Me.btnClase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
+        Me.btnClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClase.Font = New System.Drawing.Font("Segoe Print", 11.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClase.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnClase.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.classroom_48px
+        Me.btnClase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClase.Location = New System.Drawing.Point(0, 100)
+        Me.btnClase.Name = "btnClase"
+        Me.btnClase.Size = New System.Drawing.Size(259, 58)
+        Me.btnClase.TabIndex = 1
+        Me.btnClase.Text = "      Proyectos Clase"
+        Me.btnClase.UseVisualStyleBackColor = False
+        '
+        'btnMenu
+        '
+        Me.btnMenu.BackgroundImage = CType(resources.GetObject("btnMenu.BackgroundImage"), System.Drawing.Image)
+        Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMenu, BunifuAnimatorNS.DecorationType.None)
+        Me.btnMenu.FlatAppearance.BorderSize = 0
+        Me.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMenu.Location = New System.Drawing.Point(18, 0)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(52, 58)
+        Me.btnMenu.TabIndex = 3
+        Me.btnMenu.UseVisualStyleBackColor = True
+        '
+        'btnRestore
+        '
+        Me.btnRestore.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnRestore, BunifuAnimatorNS.DecorationType.None)
+        Me.btnRestore.FlatAppearance.BorderSize = 0
+        Me.btnRestore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
+        Me.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestore.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.restore_down_32px1
+        Me.btnRestore.Location = New System.Drawing.Point(1043, -2)
+        Me.btnRestore.Name = "btnRestore"
+        Me.btnRestore.Size = New System.Drawing.Size(38, 46)
+        Me.btnRestore.TabIndex = 3
+        Me.btnRestore.UseVisualStyleBackColor = True
+        Me.btnRestore.Visible = False
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMinimizar, BunifuAnimatorNS.DecorationType.None)
+        Me.btnMinimizar.FlatAppearance.BorderSize = 0
+        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
+        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimizar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.negative_32px
+        Me.btnMinimizar.Location = New System.Drawing.Point(988, -2)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(40, 49)
+        Me.btnMinimizar.TabIndex = 2
+        Me.btnMinimizar.UseVisualStyleBackColor = True
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnMaximizar, BunifuAnimatorNS.DecorationType.None)
+        Me.btnMaximizar.FlatAppearance.BorderSize = 0
+        Me.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue
+        Me.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMaximizar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.maximize_window_32px
+        Me.btnMaximizar.Location = New System.Drawing.Point(1043, -2)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(39, 49)
+        Me.btnMaximizar.TabIndex = 1
+        Me.btnMaximizar.UseVisualStyleBackColor = True
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BT2_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
+        Me.BT_PanelSubsMenus.SetDecoration(Me.btnCerrar, BunifuAnimatorNS.DecorationType.None)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.Menu_Tareas_IIP.My.Resources.Resources.close_window_32px
+        Me.btnCerrar.Location = New System.Drawing.Point(1099, -2)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(38, 49)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'Menu_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -445,4 +464,5 @@ Partial Class Menu_Principal
     Friend WithEvents MoverMenu As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents btnBolsaSolidaria As Button
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Button1 As Button
 End Class

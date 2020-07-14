@@ -3,6 +3,25 @@
 
     Private beneficiado, cont As Integer
 
+    Private Sub txtDescripcion_TextChanged(sender As Object, e As EventArgs) Handles txtDescripcion.TextChanged
+        If chkPobreza.Checked = True Then
+            Datos(cont, 4) = "Pobreza"
+        Else
+            Datos(cont, 4) = "Pobreza Externa"
+        End If
+
+        If Val(Datos(cont, 2)) >= 0 And Val(Datos(cont, 2)) <= 3 Then
+
+            chkBasica.Checked = True
+            Datos(cont, 5) = "Bolsa Basica"
+            txtDescripcion.Text = "3lbs_arroz,3lbs_maseca,3lbs_frijoles"
+        Else
+            chkRegular.Checked = True
+            Datos(cont, 5) = "Bolsa Regular"
+            txtDescripcion.Text = "5lbs_arroz,5lbs_maseca,5lbs_frijoles"
+        End If
+    End Sub
+
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         beneficiado = 0
         Dim descrip1 As String
@@ -26,22 +45,22 @@
             Datos(cont, 3) = direccion
 
 
-            If chkPobreza.Checked = True Then
-                Datos(cont, 4) = "Pobreza"
-            Else
-                Datos(cont, 4) = "Pobreza Externa"
-            End If
+            'If chkPobreza.Checked = True Then
+            '    Datos(cont, 4) = "Pobreza"
+            'Else
+            '    Datos(cont, 4) = "Pobreza Externa"
+            'End If
 
-            If Val(Datos(cont, 2)) >= 0 And Val(Datos(cont, 2)) <= 3 Then
+            'If Val(Datos(cont, 2)) >= 0 And Val(Datos(cont, 2)) <= 3 Then
 
-                chkBasica.Checked = True
-                Datos(cont, 5) = "Bolsa Basica"
-                txtDescripcion.Text = "3lbs_arroz,3lbs_maseca,3lbs_frijoles"
-            Else
-                chkRegular.Checked = True
-                Datos(cont, 5) = "Bolsa Regular"
-                txtDescripcion.Text = "5lbs_arroz,5lbs_maseca,5lbs_frijoles"
-            End If
+            '    chkBasica.Checked = True
+            '    Datos(cont, 5) = "Bolsa Basica"
+            '    txtDescripcion.Text = "3lbs_arroz,3lbs_maseca,3lbs_frijoles"
+            'Else
+            '    chkRegular.Checked = True
+            '    Datos(cont, 5) = "Bolsa Regular"
+            '    txtDescripcion.Text = "5lbs_arroz,5lbs_maseca,5lbs_frijoles"
+            'End If
 
             Do While id <> Datos(cont, 0)
                 cont += 1
